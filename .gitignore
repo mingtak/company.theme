@@ -17,13 +17,3 @@ parts/
 dist/
 var/
 config.py
-*.js
-*.css
-*.jpg
-*.png
-*.mp4
-*.avi
-*.css
-*.js
-*.gif
-*.tif
