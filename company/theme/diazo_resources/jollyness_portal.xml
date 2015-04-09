@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+  <rules css:if-content="#visual-portal-wrapper">
+
+    <theme href="jollyness/diazo_index.html" />
+
+    <!-- portal-logo -->
+    <replace css:theme="div.logo a" css:content="a#portal-logo" />
+
+    <!-- portal-globalnav -->
+    <replace theme-children="//div[@id='defaultmenu']/ul[1]" css:content="ul#portal-globalnav li" />
+      <replace css:content="ul#portal-globalnav li">
+        <xsl:copy-of select='.' />
+      </replace>
+      <replace css:content="ul#portal-globalnav li.selected">
+        <li class="active">
+          <a><xsl:attribute name="href"><xsl:value-of select="./a/@href" /></xsl:attribute>
+             <xsl:value-of select="./a" />
+          </a>
+        </li>
+      </replace>
+
+
+
+
+
+  </rules>
+
+</rules>

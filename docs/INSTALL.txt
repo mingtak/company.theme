@@ -1,0 +1,17 @@
+company.theme Installation
+--------------------------
+
+To install company.theme using zc.buildout and the plone.recipe.zope2instance
+recipe to manage your project, you can do this:
+
+* Add ``company.theme`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        company.theme
+       
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout
